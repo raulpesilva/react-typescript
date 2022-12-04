@@ -1,0 +1,56 @@
+{
+  "material-icon-theme.folders.associations": {
+    "states": "context",
+    "repositories": "mappings",
+    "schemas": "class",
+    "implementations": "core",
+    "request": "api",
+    "requests": "api",
+    "grpc": "pipe",
+    "domain": "class",
+    "migrations": "tools",
+    "modules": "components",
+    "useCases": "controller",
+    "infra": "app",
+    "protos": "pipe",
+    "providers": "include",
+    "dtos": "typescript",
+    "websockets": "pipe",
+    "fakes": "mock",
+    "app_dev": "app",
+    "entities": "class",
+    "_e2e": "test",
+    "_test": "test"
+  },
+  "material-icon-theme.files.associations": {
+    ".env.mock": "tune"
+  },
+  "files.associations": {
+    "*.env": "env",
+    "*.env.development": "env",
+    "*.env.dev": "env",
+    "*.env.e2e": "env",
+    "*.env.example": "env",
+    "*.env.mock": "env",
+    "*.env.production": "env",
+    "*.env.staging": "env",
+    "*.env.test": "env"
+  },
+  "editor.rulers": [120, 130, 160],
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.printWidth": 120,
+  "editor.codeActionsOnSave": {
+    "source.addMissingImports": true,
+    "source.fixAll.eslint": true,
+    "source.organizeImports": true
+  },
+  "material-icon-theme.activeIconPack": "react",
+  "cSpell.language": "en,pt,pt_BR",
+  "editor.stickyScroll.enabled": true,
+  "cSpell.words": ["Parens", "svgs", "testid"],
+  "testing.automaticallyOpenPeekView": "never",
+  "[env]": {
+    "editor.defaultFormatter": "IronGeek.vscode-env"
+  }
+}

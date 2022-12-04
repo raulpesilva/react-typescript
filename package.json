@@ -1,0 +1,60 @@
+{
+  "name": "react-typescript",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:mock": "vite --mode mock",
+    "dev:test": "vite --mode test",
+    "dev:staging": "vite --mode staging",
+    "dev:production": "vite --mode production",
+    "build": "tsc && vite build --mode production",
+    "build:staging": "tsc && vite build --mode production",
+    "build:dev": "tsc && vite build --mode development",
+    "build:mock": "tsc && vite build --mode mock",
+    "build:test": "tsc && vite build --mode test",
+    "build:e2e": "tsc && vite build --mode e2e",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx",
+    "prepare": "npx playwright install",
+    "preview": "vite preview",
+    "coverage": "vitest --coverage",
+    "clear": "rimraf ./dist && rimraf ./coverage",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:e2e": "yarn build && vitest --config vitest.e2e.config.ts"
+  },
+  "dependencies": {
+    "@raulpesilva/re-state": "^1.2.32",
+    "add": "^2.0.6",
+    "axios": "^1.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "styled-components": "^5.3.6",
+    "use-debounce": "^9.0.2",
+    "yarn": "^1.22.19"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.28.1",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@types/styled-components": "^5.1.26",
+    "@vitejs/plugin-react": "^2.2.0",
+    "@vitest/ui": "^0.25.3",
+    "eslint": "^8.29.0",
+    "jsdom": "^20.0.3",
+    "msw": "^0.49.0",
+    "playwright": "^1.28.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.3",
+    "vite-plugin-inspect": "^0.7.9",
+    "vite-tsconfig-paths": "^3.6.0",
+    "vitest": "^0.25.3"
+  },
+  "msw": {
+    "workerDirectory": "public"
+  }
+}

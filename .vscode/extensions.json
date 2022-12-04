@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "pkief.material-icon-theme",
+    "streetsidesoftware.code-spell-checker-portuguese-brazilian",
+    "streetsidesoftware.code-spell-checker",
+    "mikestead.dotenv",
+    "usernamehw.errorlens",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "styled-components.vscode-styled-components",
+    "ZixuanChen.vitest-explorer"
+  ]
+}

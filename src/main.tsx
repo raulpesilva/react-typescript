@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 
 async function main() {
-  if (import.meta.env.MODE === 'mock' || import.meta.env.MODE === 'test') {
+  if (import.meta.env.MODE === 'mock') {
     const { configureWorker } = await import('./mocks/browser');
     await configureWorker(import.meta.env.MODE);
   }
@@ -14,4 +14,5 @@ async function main() {
     </React.StrictMode>
   );
 }
+
 main();

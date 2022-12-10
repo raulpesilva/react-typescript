@@ -5,10 +5,12 @@ export const getUser = async (id: string) => {
   return data;
 };
 
-export const mockGetUser = mockCoreApi.get('users/:id', (_req, res, ctx) => {
-  return res(ctx.json({ name: 'Raul', id: 0 }));
+export const mockGetUser = mockCoreApi.get<{}, { id: string }>('users/:id', (req, res, ctx) => {
+  const { id } = req.params;
+  return res(ctx.json({ name: 'Raul', id }));
 });
 
-export const testGetUser = mockCoreApi.get('users/:id', (_req, res, ctx) => {
-  return res(ctx.json({ name: 'Raul', id: 1 }));
+export const testGetUser = mockCoreApi.get<{}, { id: string }>('users/:id', (req, res, ctx) => {
+  const { id } = req.params;
+  return res(ctx.json({ name: 'Raul', id }));
 });

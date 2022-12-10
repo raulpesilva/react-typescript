@@ -1,5 +1,5 @@
 async function setup() {
-  if (import.meta.env.MODE === 'mock' || import.meta.env.MODE === 'test') {
+  if (import.meta.env.MODE === 'test') {
     const { configureServer } = await import('./mocks/server');
     const server = await configureServer(import.meta.env.MODE);
     if (!server) return;

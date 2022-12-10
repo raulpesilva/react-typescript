@@ -22,7 +22,7 @@
     "clear": "rimraf ./dist && rimraf ./coverage",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:e2e": "yarn build && vitest --config vitest.e2e.config.ts"
+    "test:e2e": "yarn build && vitest --config vite.e2e.config.ts"
   },
   "dependencies": {
     "@raulpesilva/re-state": "^1.2.32",

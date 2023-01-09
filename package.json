@@ -26,14 +26,12 @@
   },
   "dependencies": {
     "@raulpesilva/re-state": "^1.2.32",
-    "add": "^2.0.6",
     "axios": "^1.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.3",
     "styled-components": "^5.3.6",
-    "use-debounce": "^9.0.2",
-    "yarn": "^1.22.19"
+    "use-debounce": "^9.0.2"
   },
   "devDependencies": {
     "@playwright/test": "^1.28.1",

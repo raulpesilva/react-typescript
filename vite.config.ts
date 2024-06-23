@@ -8,7 +8,7 @@ import tsConfigPaths from 'vite-tsconfig-paths';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd());
   return {
-    define: { __APP_ENV__: env.APP_ENV },
+    define: { __APP_ENV__: JSON.stringify(env.APP_ENV) },
     plugins: [tsConfigPaths(), react()],
     envDir: './src/environments',
     envPrefix: 'VITE_',
@@ -18,9 +18,7 @@ export default defineConfig(({ mode }) => {
       environment: 'jsdom',
       setupFiles: './src/test.config.ts',
       include: ['./src/**/*.test.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'],
-      coverage: {
-        exclude: ['./src/_e2e/**'],
-      },
+      coverage: { provider: 'v8', exclude: ['./src/_e2e/**'] },
     },
   };
 });

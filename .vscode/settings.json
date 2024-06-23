@@ -20,10 +20,11 @@
     "app_dev": "app",
     "entities": "class",
     "_e2e": "test",
-    "_test": "test"
+    "_test": "test",
   },
   "material-icon-theme.files.associations": {
-    ".env.mock": "tune"
+    ".env.mock": "tune",
+    "vite.e2e.config.ts": "vitest"
   },
   "files.associations": {
     "*.env": "env",
@@ -41,9 +42,9 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "prettier.printWidth": 120,
   "editor.codeActionsOnSave": {
-    "source.addMissingImports": true,
-    "source.fixAll.eslint": true,
-    "source.organizeImports": true
+    "source.addMissingImports": "explicit",
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "explicit"
   },
   "material-icon-theme.activeIconPack": "react",
   "cSpell.language": "en,pt,pt_BR",

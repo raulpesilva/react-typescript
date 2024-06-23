@@ -1,4 +1,5 @@
 import { coreApi, mockCoreApi } from 'api';
+import { HttpResponse } from 'msw';
 
 export const getRandomNumber = async () => {
   try {
@@ -9,10 +10,10 @@ export const getRandomNumber = async () => {
   }
 };
 
-export const mockGetRandomNumber = mockCoreApi.get('random/number', (_req, res, ctx) => {
-  return res(ctx.json({ random: `Raul mock ${Math.random()}` }));
+export const mockGetRandomNumber = mockCoreApi.get('random/number', () => {
+  return HttpResponse.json({ random: `Raul mock ${Math.random()}` });
 });
 
-export const testGetRandomNumber = mockCoreApi.get('random/number', (_req, res, ctx) => {
-  return res(ctx.json({ random: `Raul test ${Math.random()}` }));
+export const testGetRandomNumber = mockCoreApi.get('random/number', () => {
+  return HttpResponse.json({ random: `Raul mock ${Math.random()}` });
 });

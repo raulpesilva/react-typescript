@@ -6,16 +6,15 @@ import tsConfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), tsConfigPaths()],
+  plugins: [tsConfigPaths(), react()],
   envDir: './src/environments',
   envPrefix: 'VITE_',
+  json: { namedExports: true },
   test: {
     globals: true,
     environment: 'jsdom',
     setupFiles: './src/test.config.ts',
-    include: ['./src/**/*.spec.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'],
-    coverage: {
-      exclude: ['./src/_e2e/**'],
-    },
+    include: ['./src/**/*.test.{js,mjs,cjs,jsx,ts,mts,cts,tsx}'],
+    coverage: { provider: 'v8', exclude: ['./src/_e2e/**'] },
   },
 });
